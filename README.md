@@ -88,6 +88,7 @@ A <dfn>definition</dfn> is:
 No other HTML elements are recognized as defining a term.
 
 #### dfn
+
 A a dfn-definition MUST have the following attributes:
 
 - `id` attribute, unique to the document.
