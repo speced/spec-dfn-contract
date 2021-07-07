@@ -43,7 +43,7 @@ A more complex examples:
 
 This document serves as the canonical source for how definitions are marked-up.
 
-Conforming applications to this specification are primarily authoring tools that assist in generating technical specifications. However, this specification is also here to help people who wish to mark up documents manually (or simply want to understand why various attributes mean and what they do!).
+Conforming applications to this specification are primarily authoring tools that assist in generating technical specifications. However, this specification is also here to help people who wish to mark up documents manually (or simply want to understand what various attributes mean and what they do!).
 
 Example of authoring tools (or "generators") that try to conform to this specification:
 
@@ -62,7 +62,7 @@ Examples of definition crawlers include:
 - [Shepherd](https://dev.csswg.org/projects/shepherd)
 - [Reffy](https://github.com/w3c/reffy)
 
-Crawlers structure and categorized extracted terms into files or databases, allowing for the creation of search tools such as:
+Crawlers structure and categorize extracted terms into files or databases, allowing for the creation of search tools such as:
 
 - <https://respec.org/xref>
 - Bikeshed's cross-reference search.
@@ -141,6 +141,7 @@ When exporting WebIDL definitions, the `data-dfn-type` can be one of the followi
 - iterator
 - maplike
 - method
+- namespace
 - serializer
 - setlike
 - stringifier
