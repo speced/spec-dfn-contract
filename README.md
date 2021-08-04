@@ -1,10 +1,10 @@
-# Specification definitions contract
+# Definitions Contract
 
-This document defines the "specification definitions contract", known herein as, "the contract".
+This document defines the Definitions Contract for technical specifications; known herein as _the contract_.
 
 The contract standardizes definitions (i.e., `<dfn>` or `h1`-`h6` elements) and corresponding attributes and values are marked-up.
 
-Specifications that conform to the contract are, with the help of reference databases, able to unambiguously cross-reference each other's definitions.
+Specifications that conform to the contract can unambiguously cross-reference each others' definitions. This is done through with the aid of reference database, which can be built by processing definitions that conform to this document.
 
 ## Some examples
 
@@ -16,7 +16,7 @@ A simple example of a definition:
 </dfn>
 ```
 
-A more complex examples:
+A more complex example:
 
 ```HTML
 <!-- Example of defining an abstract operation -->
@@ -36,14 +36,14 @@ A more complex examples:
   data-dfn-for="">
   <code>PaymentRequest</code>
 </dfn>
-
 ```
 
 ## Conformance
 
-This document serves as the canonical source for how definitions are marked-up.
+This document serves as the canonical source for how definitions are marked-up (automatically by tools or manually by spec editors).
 
-Conforming applications to this specification are primarily authoring tools that assist in generating technical specifications. However, this specification is also here to help people who wish to mark up documents manually (or simply want to understand what various attributes mean and what they do!).
+Conforming applications to this specification are primarily authoring tools that assist in generating/writing technical specifications.
+However, this specification is also here to help people who wish to mark up documents manually - or simply want to understand what various attributes mean and what they do!
 
 Example of authoring tools (or "generators") that try to conform to this specification:
 
@@ -69,7 +69,7 @@ Crawlers structure and categorize extracted terms into files or databases, allow
 
 ## How to get your spec indexed
 
-To have your specification indexed by a crawler, it MUST be registered with:
+To have your specification indexed by a crawler, it needs to be registered with:
 
 - [browser specs](https://github.com/w3c/browser-specs/) - See [criteria for inclusion](https://github.com/w3c/browser-specs/blob/master/README.md#spec-selection-criteria).
 - [Shepherd](https://dev.csswg.org/projects/shepherd) - [Contact maintainer(s) directly](https://dev.csswg.org/users/3).
@@ -87,17 +87,21 @@ A <dfn>definition</dfn> is:
 
 No other HTML elements are recognized as defining a term.
 
+Additionally, a definition has an `id` attribute unique to the document.
+
 #### dfn
 
-A a `dfn` definition has the following attributes:
-
-- `id` attribute, unique to the document.
-
-Optionally, the following attributes can be present:
+Optionally, the following attributes can be present on a `dfn`-based definitions:
 
 - `data-dfn-type`, with one of type values.
 - `data-export` or `data-noexport` (they are exclusive).
 - `data-dfn-for`
+
+### Heading-based definitions
+
+Heading-based definitions are those defined using `h1`-`h6` elements.
+
+...to be written...
 
 ### Exporting definitions (`data-export`)
 
@@ -111,7 +115,7 @@ Authors SHOULD only export definitions they intend others to use.
 
 A `data-noexport` attribute means a definition is intended for private use by a specification.
 
-Note: it is considered bad practice to link to definitions marked as `data-noexport`.
+**Note:** It is considered bad practice to link to definitions marked as `data-noexport` from another specification.
 
 ### Namespacing (`data-dfn-for`)
 
@@ -121,7 +125,9 @@ TODO: The "null" namespace ([= / something =]).
 
 ### Types of definitions (`data-dfn-type`)
 
-Every exported definition MUST have a `data-dfn-type`.
+Every exported definition has a "type", which is identified by the presence of a `data-dfn-type`.
+
+When the `data-dfn-type` is missing, it is assumed to be the "dfn" type.
 
 #### WebIDL
 
@@ -150,12 +156,26 @@ When exporting WebIDL definitions, the `data-dfn-type` can be one of the followi
 
 #### Events
 
+...to be written...
+
 #### Permissions
+
+...to be written...
 
 #### Task Sources
 
+...to be written...
+
 #### CSS
-TBW:
+
+- property
+- descriptor (the things inside at-rules like @font-face)
+- value (any value that goes inside of a property, at-rule, etc.)
+- type (an abstract type for CSS grammars, like `<length>` or `<image>`)
+- at-rule
+- function (like counter() or linear-gradient())
+- selector
+
 #### Markup Elements
 
 - element
@@ -163,12 +183,14 @@ TBW:
 - element-attr
 - attr-value
 
-### URL Schemes
+#### URL Schemes
 
-TBW:
-### HTTP Headers
+...to be written...
+
+#### HTTP Headers
 
 - http-header
 
 #### Grammars
-TBW:
+
+...to be written...
