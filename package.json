@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "description": "Specification definition contract",
   "scripts": {
-    "build-respec": "respec --use-local src/respec/index.html src/respec/out/index.html",
-    "build-bikeshed": "curl https://api.csswg.org/bikeshed/ -F file=@src/bikeshed/index.bs -F force=1 > src/bikeshed/out/index.html",
-    "pretest": "npm run build-respec; npm run build-bikeshed",
+    "build-respec": "respec --use-local src/respec/index.html out/respec.html",
+    "build-bikeshed": "curl https://api.csswg.org/bikeshed/ -F file=@src/bikeshed/index.bs -F force=1 > out/bikeshed.html",
+    "pretest": "mkdir -p out;npm run build-respec; npm run build-bikeshed",
     "test": "karma start"
   },
   "repository": {
@@ -27,8 +27,8 @@
     "karma": "^6.3.4",
     "karma-chrome-launcher": "^3.1.0",
     "karma-jasmine": "^4.0.1",
-    "karma-jasmine-html-reporter": "^1.6.0",
+    "karma-jasmine-html-reporter": "^1.7.0",
     "karma-spec-reporter": "^0.0.32",
-    "respec": "^26.9.1"
+    "respec": "^26.12.1"
   }
 }

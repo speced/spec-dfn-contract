@@ -7,8 +7,9 @@ beforeAll(async () => {
   }
 });
 
-afterAll(() => {
-  cleanUp(docTypes.values());
+afterAll(async () => {
+  const iFrames = await Promise.all([...docTypes.values()]);
+  cleanUp(iFrames);
 });
 
 for (const type of sources) {
@@ -19,7 +20,8 @@ for (const type of sources) {
       const dfn = doc.querySelector(
         "#simple-definition dfn[data-dfn-type=dfn]"
       );
-      expect(dfn).not.toBeNull();
+      debugger
+      expect(dfn).withContext(type).not.toBeNull();
     });
 
     it(`must have an id attribute`, async () => {

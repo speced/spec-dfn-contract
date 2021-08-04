@@ -12,10 +12,11 @@ module.exports = function (config) {
 
     proxies: {
       "/src/": "/base/src/",
+      "/out/": "/base/out/",
     },
 
     // list of files / patterns to load in the browser
-    files: ["spec/**/*.js", "src/**/*.html"],
+    files: ["spec/**/*.js", "out/*.html"],
 
     // list of files / patterns to exclude
     exclude: [],
