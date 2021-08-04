@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "Specification definition contract",
   "scripts": {
-    "build-respec": "respec --use-local src/respec/index.html out/respec.html",
-    "build-bikeshed": "curl https://api.csswg.org/bikeshed/ -F file=@src/bikeshed/index.bs -F force=1 > out/bikeshed.html",
+    "build-respec": "respec --use-local src/respec.html out/respec.html",
+    "build-bikeshed": "curl https://api.csswg.org/bikeshed/ -F file=@src/bikeshed.bs -F force=1 > out/bikeshed.html",
     "pretest": "mkdir -p out;npm run build-respec; npm run build-bikeshed",
     "test": "karma start"
   },
