@@ -2,7 +2,7 @@
 
 This document defines the "specification definitions contract", known herein as, "the contract".
 
-The contract standardizes how an HTML definition (i.e., anything inside a `<dfn>` or `h1`-`h6` element) and respective attributes and values.
+The contract standardizes definitions (i.e., `<dfn>` or `h1`-`h6` elements) and corresponding attributes and values are marked-up.
 
 Specifications that conform to the contract are, with the help of reference databases, able to unambiguously cross-reference each other's definitions.
 
@@ -11,7 +11,7 @@ Specifications that conform to the contract are, with the help of reference data
 A simple example of a definition:
 
 ```HTML
-<dfn id="simple-def" data-export="" data-dfn-type="dfn">
+<dfn id="simple-definition" data-export="" data-dfn-type="dfn">
   I'm a simple definition
 </dfn>
 ```
@@ -89,13 +89,13 @@ No other HTML elements are recognized as defining a term.
 
 #### dfn
 
-A a dfn-definition MUST have the following attributes:
+A a `dfn` definition has the following attributes:
 
 - `id` attribute, unique to the document.
+
+Optionally, the following attributes can be present:
+
 - `data-dfn-type`, with one of type values.
-
-The following attributes are OPTIONAL:
-
 - `data-export` or `data-noexport` (they are exclusive).
 - `data-dfn-for`
 
@@ -111,7 +111,7 @@ Authors SHOULD only export definitions they intend others to use.
 
 A `data-noexport` attribute means a definition is intended for private use by a specification.
 
-Other specifications MUST NOT reference or link to definitions marked as `data-noexport`.
+Note: it is considered bad practice to link to definitions marked as `data-noexport`.
 
 ### Namespacing (`data-dfn-for`)
 
@@ -148,8 +148,14 @@ When exporting WebIDL definitions, the `data-dfn-type` can be one of the followi
 - stringifier
 - typedef
 
-#### CSS
+#### Events
 
+#### Permissions
+
+#### Task Sources
+
+#### CSS
+TBW:
 #### Markup Elements
 
 - element
@@ -159,8 +165,10 @@ When exporting WebIDL definitions, the `data-dfn-type` can be one of the followi
 
 ### URL Schemes
 
+TBW:
 ### HTTP Headers
 
 - http-header
 
 #### Grammars
+TBW:
