@@ -158,14 +158,6 @@ When exporting WebIDL definitions, the `data-dfn-type` can be one of the followi
 
 ...to be written...
 
-#### Permissions
-
-...to be written...
-
-#### Task Sources
-
-...to be written...
-
 #### CSS
 
 - property
