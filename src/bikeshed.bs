@@ -1,0 +1,22 @@
+<pre class='metadata'>
+Title: Definitions
+Status: UD
+Group: WebApps
+Level: none
+indent: 4
+Abstract: hello world
+Markup Shorthands: markdown yes
+Shortname: definitions
+ED: https://foo.bar
+Editor: Mr Foo
+</pre>
+
+## Definition exports {#some-id}
+
+<p id="simple-definition">
+  A <dfn>definition</dfn>, [=definition=].
+</p>
+
+<p id="definition-exported">
+  A <dfn export>exported definition</dfn>.
+</p>
