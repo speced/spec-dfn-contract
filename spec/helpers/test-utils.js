@@ -7,7 +7,7 @@ async function createIframe(type) {
 }
 
 async function cleanUp(iFrames) {
-  for (iframe of iFrames) {
+  for (const iframe of iFrames) {
     iframe.remove();
   }
 }
