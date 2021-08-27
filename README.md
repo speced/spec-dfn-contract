@@ -2,9 +2,9 @@
 
 This document defines the Definitions Contract for technical specifications; known herein as _the contract_.
 
-The contract standardizes definitions (i.e., `<dfn>` or `h1`-`h6` elements) and corresponding attributes and values are marked-up.
+The contract standardizes the concept of "definitions" provided by certain elements (i.e., `<dfn>` or `h1`-`h6` elements) and the corresponding attributes and values that provide necessary metadata about them.
 
-Specifications that conform to the contract can unambiguously cross-reference each others' definitions. This is done through with the aid of reference database, which can be built by processing definitions that conform to this document.
+Specifications that conform to the contract can unambiguously cross-reference each other's definitions. This is done with the aid of a reference database, which can be built by processing definitions that conform to this document.
 
 ## Some examples
 
@@ -65,7 +65,7 @@ Examples of definition crawlers include:
 Crawlers structure and categorize extracted terms into files or databases, allowing for the creation of search tools such as:
 
 - <https://respec.org/xref>
-- Bikeshed's cross-reference search.
+- Bikeshed's cross-reference search (the `bikeshed refs` command)
 
 ## How to get your spec indexed
 
@@ -87,15 +87,15 @@ A <dfn>definition</dfn> is:
 
 No other HTML elements are recognized as defining a term.
 
-Additionally, a definition has an `id` attribute unique to the document.
+Additionally, a definition must have an `id` attribute unique to the document.
 
 #### dfn
 
 Optionally, the following attributes can be present on a `dfn`-based definitions:
 
-- `data-dfn-type`, with one of type values.
-- `data-export` or `data-noexport` (they are exclusive).
-- `data-dfn-for`
+- `data-dfn-type`, containing one of the recognized type values (see below).
+- `data-export` or `data-noexport`, indicating whether the definition is intended to be public or document-private (see below)
+- `data-dfn-for`, namespacing the value relative to some other construct (see below)
 
 ### Heading-based definitions
 
