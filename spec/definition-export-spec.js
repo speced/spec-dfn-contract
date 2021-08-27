@@ -20,7 +20,6 @@ for (const type of sources) {
       const dfn = doc.querySelector(
         "#simple-definition dfn[data-dfn-type=dfn]"
       );
-      debugger
       expect(dfn).withContext(type).not.toBeNull();
     });
 
