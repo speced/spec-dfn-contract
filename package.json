@@ -1,0 +1,34 @@
+{
+  "name": "spec-dfn-contract",
+  "version": "1.0.0",
+  "description": "Specification definition contract",
+  "scripts": {
+    "build-respec": "respec --use-local src/respec.html out/respec.html",
+    "build-bikeshed": "curl https://api.csswg.org/bikeshed/ -F file=@src/bikeshed.bs -F force=1 > out/bikeshed.html",
+    "pretest": "mkdir -p out;npm run build-respec; npm run build-bikeshed",
+    "test": "karma start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/speced/spec-dfn-contract.git"
+  },
+  "keywords": [
+    "standards"
+  ],
+  "author": "",
+  "license": "CC0-1.0",
+  "bugs": {
+    "url": "https://github.com/speced/spec-dfn-contract/issues"
+  },
+  "homepage": "https://github.com/speced/spec-dfn-contract#readme",
+  "devDependencies": {
+    "jasmine": "^3.8.0",
+    "jasmine-core": "^3.8.0",
+    "karma": "^6.3.4",
+    "karma-chrome-launcher": "^3.1.0",
+    "karma-jasmine": "^4.0.1",
+    "karma-jasmine-html-reporter": "^1.7.0",
+    "karma-spec-reporter": "^0.0.32",
+    "respec": "^26.12.1"
+  }
+}
