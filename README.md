@@ -47,7 +47,7 @@ However, this specification is also here to help people who wish to mark up docu
 
 Example of authoring tools (or "generators") that try to conform to this specification:
 
-- [Bikeshed](http://github.com/tabatkins/bikeshed)
+- [Bikeshed](http://github.com/speced/bikeshed)
 - [ReSpec](http://github.com/w3c/respec)
 - [Wattsi](https://github.com/whatwg/wattsi)
 
@@ -59,7 +59,6 @@ Aside from specifications internally cross-referencing their own terms and terms
 
 Examples of definition crawlers include:
 
-- [Shepherd](https://dev.csswg.org/projects/shepherd)
 - [Reffy](https://github.com/w3c/reffy)
 
 Crawlers structure and categorize extracted terms into files or databases, allowing for the creation of search tools such as:
@@ -72,7 +71,6 @@ Crawlers structure and categorize extracted terms into files or databases, allow
 To have your specification indexed by a crawler, it needs to be registered with:
 
 - [browser specs](https://github.com/w3c/browser-specs/) - See [criteria for inclusion](https://github.com/w3c/browser-specs/blob/master/README.md#spec-selection-criteria).
-- [Shepherd](https://dev.csswg.org/projects/shepherd) - [Contact maintainer(s) directly](https://dev.csswg.org/users/3).
 
 ## The Contract
 
