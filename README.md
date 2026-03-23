@@ -202,7 +202,7 @@ When exporting WebIDL definitions, the `data-dfn-type` can be one of the followi
 
 #### Events
 
-...to be written...
+* `event` (an event name)
 
 #### CSS
 
